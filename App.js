@@ -2,13 +2,17 @@ import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 
+import UserContextProvider from "./src/contexts/UserContext";
+
 import MainStack from "./src/stacks/MainStack";
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <MainStack />
-      <StatusBar style="light" />
-    </NavigationContainer>
+    <UserContextProvider>
+      <NavigationContainer>
+        <MainStack />
+        <StatusBar style="light" />
+      </NavigationContainer>
+    </UserContextProvider>
   );
 }

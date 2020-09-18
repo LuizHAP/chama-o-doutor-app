@@ -9,7 +9,11 @@ function Preload() {
   const { navigate } = useNavigation();
 
   const handleStartQuestionnarie = () => {
-    navigate('Questionnarie');
+    navigate("Questionnarie");
+  };
+
+  const handleUploadData = () => {
+    navigate("UploadData");
   };
 
   return (
@@ -19,6 +23,9 @@ function Preload() {
         onPress={handleStartQuestionnarie}
       >
         <Text style={styles.startQuestionnarieText}>Iniciar</Text>
+      </RectButton>
+      <RectButton style={styles.startQuestionnarie} onPress={handleUploadData}>
+        <Text style={styles.startQuestionnarieText}>UploadData</Text>
       </RectButton>
     </View>
   );

@@ -1,9 +1,16 @@
-import React, { useState } from "react";
-import { Text, KeyboardAvoidingView, TextInput, View, TouchableOpacity} from "react-native";
+import React, { useState, useContext } from "react";
+import {
+  Text,
+  KeyboardAvoidingView,
+  TextInput,
+  View,
+  TouchableOpacity,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
+import { UserContext } from "../../contexts/UserContext";
+
 import styles from "./style";
-import { RectButton } from "react-native-gesture-handler";
 
 function Questionnarie() {
   const { navigate } = useNavigation();
@@ -11,10 +18,21 @@ function Questionnarie() {
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
 
+  const { dispatch } = useContext(UserContext);
+
   const handleSubmitForm = () => {
-    console.log({name: name, lastname: lastname, email: email});
-    navigate('FirstStep');
-  }
+    let buildJson = JSON.stringify({
+      name: name,
+      lastname: lastname,
+      email: email,
+    });
+    console.log(buildJson);
+    dispatch({
+      type: "ADD_USER",
+      payload: buildJson,
+    });
+    navigate("FirstStep");
+  };
 
   return (
     <KeyboardAvoidingView
@@ -49,9 +67,12 @@ function Questionnarie() {
           autoCapitalize="none"
           keyboardType="email-address"
         />
-        <TouchableOpacity style={styles.submitButton} onPress={handleSubmitForm}>
-            <Text style={styles.submitButtonText}>Enviar</Text>
-          </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.submitButton}
+          onPress={handleSubmitForm}
+        >
+          <Text style={styles.submitButtonText}>Enviar</Text>
+        </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
   );

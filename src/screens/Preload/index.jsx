@@ -6,17 +6,19 @@ import { RectButton } from "react-native-gesture-handler";
 import styles from "./style";
 
 function Preload() {
-
-  const navigation = useNavigation();
+  const { navigate } = useNavigation();
 
   const handleStartQuestionnarie = () => {
-
-  }
+    navigate('Questionnarie');
+  };
 
   return (
     <View style={styles.container}>
-      <RectButton style={styles.signButton} onPress={handleStartQuestionnarie}>
-        <Text style={styles.signButtonText}>Iniciar</Text>
+      <RectButton
+        style={styles.startQuestionnarie}
+        onPress={handleStartQuestionnarie}
+      >
+        <Text style={styles.startQuestionnarieText}>Iniciar</Text>
       </RectButton>
     </View>
   );

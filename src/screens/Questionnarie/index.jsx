@@ -21,15 +21,9 @@ function Questionnarie() {
   const { dispatch } = useContext(UserContext);
 
   const handleSubmitForm = () => {
-    let buildJson = JSON.stringify({
-      name: name,
-      lastname: lastname,
-      email: email,
-    });
-    console.log(buildJson);
     dispatch({
       type: "ADD_USER",
-      payload: buildJson,
+      payload: { name: name, lastname: lastname, email: email },
     });
     navigate("FirstStep");
   };

@@ -6,7 +6,7 @@ import { Video } from "expo-av";
 import styles from "./style";
 import { RectButton } from "react-native-gesture-handler";
 
-function Video() {
+function VideoKikoCand() {
   const { navigate } = useNavigation();
 
   return (
@@ -28,4 +28,4 @@ function Video() {
   );
 }
 
-export default Video;
+export default VideoKikoCand;

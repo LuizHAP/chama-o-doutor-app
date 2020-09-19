@@ -3,9 +3,10 @@ import { v4 as uuidv4 } from "uuid";
 export const initialState = {
   user: [],
   answers: {
-    firstAnswer: null,
-    secondAnswer: null,
-    thirdAnswer: null,
+    candPrefeito: null,
+    governoKiko: null,
+    candPrefKiko: null,
+    querConhecer: null,
   },
 };
 
@@ -14,14 +15,19 @@ export const UserReducer = (state, action) => {
     case "ADD_USER":
       return {
         ...state,
-        user: action.payload,
+        user: {
+          id: uuidv4(),
+          name: action.payload.name,
+          lastname: action.payload.lastname,
+          email: action.payload.email,
+        },
       };
     case "ADD_FIRSTANSWER":
       return {
         ...state,
         answers: {
           ...state.answers,
-          firstAnswer: action.payload,
+          candPrefeito: action.payload,
         },
       };
     case "ADD_SECONDANSWER":
@@ -29,7 +35,7 @@ export const UserReducer = (state, action) => {
         ...state,
         answers: {
           ...state.answers,
-          secondAnswer: action.payload,
+          governoKiko: action.payload,
         },
       };
     case "ADD_THIRDANSWER":
@@ -37,7 +43,15 @@ export const UserReducer = (state, action) => {
         ...state,
         answers: {
           ...state.answers,
-          thirdAnswer: action.payload,
+          candPrefKiko: action.payload,
+        },
+      };
+    case "ADD_FOURTHANSWER":
+      return {
+        ...state,
+        answers: {
+          ...state.answers,
+          querConhecer: action.payload,
         },
       };
     default:

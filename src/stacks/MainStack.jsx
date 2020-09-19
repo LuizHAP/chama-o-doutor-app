@@ -8,6 +8,8 @@ import Questionnarie from "../screens/Questionnarie";
 import FirstStep from "../screens/FirstStep";
 import SecondStep from "../screens/SecondStep";
 import ThirdStep from "../screens/ThirdStep";
+import VideoKikoCand from "../screens/VideoKikoCand";
+import Final from "../screens/Final";
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -23,6 +25,8 @@ export default function MainStack() {
       <Screen name="FirstStep" component={FirstStep} />
       <Screen name="SecondStep" component={SecondStep} />
       <Screen name="ThirdStep" component={ThirdStep} />
+      <Screen name="VideoKikoCand" component={VideoKikoCand} />
+      <Screen name="Final" component={Final} />
     </Navigator>
   );
 }

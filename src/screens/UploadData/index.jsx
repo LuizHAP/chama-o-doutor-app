@@ -12,7 +12,6 @@ const UploadData = (props) => {
   const { state } = useContext(UserContext);
 
   const handleUploadData = () => {
-    console.log("Chegou");
     console.log(state);
   };
 

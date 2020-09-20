@@ -16,6 +16,9 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android": {
+      "package": "com.teste.chamaodoutor"
+    },
     "ios": {
       "supportsTablet": true
     },

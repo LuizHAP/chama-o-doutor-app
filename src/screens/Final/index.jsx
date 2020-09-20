@@ -14,9 +14,9 @@ function Final() {
 
   const asyncStorageSet = async () => {
     try {
-      const stringfyID = JSON.stringify(state.user.id);
-      await AsyncStorage.setItem(`${stringfyID}`, state);
-      console.log("chegou aqui");
+      console.log(state);
+      const stringfyID = JSON.stringify(state.id);
+      await AsyncStorage.setItem(`${stringfyID}`, JSON.stringify(state));
     } catch (e) {
       console.log(e);
     }

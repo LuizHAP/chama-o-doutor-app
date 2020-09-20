@@ -1,18 +1,23 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { View, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { RectButton } from "react-native-gesture-handler";
-import { UserContext } from "../../contexts/UserContext";
+
+import AsyncStorage from "@react-native-community/async-storage";
 
 import styles from "./style";
 
 const UploadData = (props) => {
   const { navigate } = useNavigation();
 
-  const { state } = useContext(UserContext);
-
-  const handleUploadData = () => {
-    console.log(state);
+  const handleUploadData = async () => {
+    let keys = [];
+    try {
+      keys = await AsyncStorage.getAllKeys();
+      console.log(keys);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (

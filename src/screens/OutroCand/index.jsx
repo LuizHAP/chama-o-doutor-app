@@ -6,7 +6,7 @@ import { Video } from "expo-av";
 import styles from "./style";
 import { RectButton } from "react-native-gesture-handler";
 
-function VideoKikoCand() {
+function OutroCand() {
   const { navigate } = useNavigation();
 
   return (
@@ -22,10 +22,10 @@ function VideoKikoCand() {
         style={styles.video}
       />
       <RectButton style={styles.startQuestionnarie} onPress={handlePreload}>
-        <Text style={styles.startQuestionnarieText}>Continuar</Text>
+        <Text style={styles.startQuestionnarieText}>Finalizar</Text>
       </RectButton>
     </View>
   );
 }
 
-export default VideoKikoCand;
+export default OutroCand;

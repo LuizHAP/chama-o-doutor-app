@@ -17,7 +17,7 @@ export default function ThirdStep() {
       type: "ADD_THIRDANSWER",
       payload: "Sim",
     });
-    //navigate("CandKiko");
+    navigate("ConheceCand");
   };
 
   const handleNoAsnwer = () => {

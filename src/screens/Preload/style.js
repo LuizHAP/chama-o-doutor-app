@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#333",
     borderRadius: 8,
     padding: 24,
+    margin: 5,
   },
 
   startQuestionnarieText: {

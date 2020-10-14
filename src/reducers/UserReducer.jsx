@@ -6,7 +6,7 @@ export const UserReducer = (state, action) => {
       return {
         ...state,
         id: uuidv4(),
-        name: action.payload.name,
+        nomeColaborador: action.payload.nomeColaborador,
       };
     case "ADD_FIRSTANSWER":
       return {

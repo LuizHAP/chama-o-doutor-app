@@ -14,16 +14,16 @@ import styles from "./style";
 
 function Questionnarie() {
   const { navigate } = useNavigation();
-  const [name, setName] = useState("");
+  const [nomeColaborador, setNomeColaborador] = useState("");
 
   const { dispatch } = useContext(UserContext);
 
   const handleSubmitForm = () => {
     dispatch({
       type: "ADD_USER",
-      payload: { name: name },
+      payload: { nomeColaborador: nomeColaborador },
     });
-    navigate("FirstStep");
+    navigate("Inicial");
   };
 
   return (
@@ -35,11 +35,10 @@ function Questionnarie() {
         <Text style={styles.label}>Nome do Colaborador</Text>
         <TextInput
           style={styles.input}
-          value={name}
-          onChangeText={(text) => setName(text)}
+          value={nomeColaborador}
+          onChangeText={(text) => setNomeColaborador(text)}
           autoCorrect={false}
           autoCapitalize="none"
-          keyboardType="text"
         />
         <TouchableOpacity
           style={styles.submitButton}

@@ -16,12 +16,12 @@ const { Navigator, Screen } = createStackNavigator();
 export default function MainStack() {
   return (
     <Navigator
-      initialRouteName="Preload"
+      initialRouteName="Questionnarie"
       screenOptions={{ headerShown: false }}
     >
-      <Screen name="Preload" component={Preload} />
-      <Screen name="UploadData" component={UploadData} />
       <Screen name="Questionnarie" component={Questionnarie} />
+      <Screen name="Inicial" component={Preload} />
+      <Screen name="UploadData" component={UploadData} />
       <Screen name="FirstStep" component={FirstStep} />
       <Screen name="SecondStep" component={SecondStep} />
       <Screen name="ThirdStep" component={ThirdStep} />

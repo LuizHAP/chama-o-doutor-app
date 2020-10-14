@@ -14,7 +14,7 @@ export default function SecondStep() {
   const handleYesAnswer = () => {
     dispatch({
       type: "ADD_SECONDANSWER",
-      payload: "Sim",
+      payload: "Aprova",
     });
     navigate("ThirdStep");
   };
@@ -22,7 +22,7 @@ export default function SecondStep() {
   const handleNoAsnwer = () => {
     dispatch({
       type: "ADD_SECONDANSWER",
-      payload: "Não",
+      payload: "Desaprova",
     });
     navigate("ThirdStep");
   };

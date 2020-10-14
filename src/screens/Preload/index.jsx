@@ -9,7 +9,7 @@ function Preload() {
   const { navigate } = useNavigation();
 
   const handleStartQuestionnarie = () => {
-    navigate("Questionnarie");
+    navigate("FirstStep");
   };
 
   const handleUploadData = () => {

@@ -11,12 +11,15 @@ const UploadData = (props) => {
   const { navigate } = useNavigation();
 
   const handleUploadData = async () => {
-    let keys = [];
     try {
-      keys = await AsyncStorage.getAllKeys();
-      console.log(keys);
+      const keys = await AsyncStorage.getAllKeys();
+      const result = await AsyncStorage.multiGet(keys);
+      result.map((req) => req.forEach(console.log));
+      await AsyncStorage.clear();
+      navigate("Inicial");
     } catch (e) {
       console.log(e);
+      alert(e);
     }
   };
 

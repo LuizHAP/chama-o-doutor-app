@@ -15,15 +15,13 @@ import styles from "./style";
 function Questionnarie() {
   const { navigate } = useNavigation();
   const [name, setName] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
 
   const { dispatch } = useContext(UserContext);
 
   const handleSubmitForm = () => {
     dispatch({
       type: "ADD_USER",
-      payload: { name: name, lastname: lastname, email: email },
+      payload: { name: name },
     });
     navigate("FirstStep");
   };
@@ -34,32 +32,14 @@ function Questionnarie() {
       style={styles.container}
     >
       <View style={styles.questionnarieForm}>
-        <Text style={styles.label}>Nome</Text>
+        <Text style={styles.label}>Nome do Colaborador</Text>
         <TextInput
           style={styles.input}
           value={name}
           onChangeText={(text) => setName(text)}
           autoCorrect={false}
           autoCapitalize="none"
-          keyboardType="email-address"
-        />
-        <Text style={styles.label}>Sobrenome</Text>
-        <TextInput
-          style={styles.input}
-          value={lastname}
-          onChangeText={(text) => setLastname(text)}
-          autoCorrect={false}
-          autoCapitalize="none"
-          keyboardType="email-address"
-        />
-        <Text style={styles.label}>E-mail</Text>
-        <TextInput
-          style={styles.input}
-          value={email}
-          onChangeText={(text) => setEmail(text)}
-          autoCorrect={false}
-          autoCapitalize="none"
-          keyboardType="email-address"
+          keyboardType="text"
         />
         <TouchableOpacity
           style={styles.submitButton}

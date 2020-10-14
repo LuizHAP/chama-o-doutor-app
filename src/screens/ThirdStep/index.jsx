@@ -34,7 +34,7 @@ export default function ThirdStep() {
       payload: "Sim",
     });
     setShow4thQuestion(false);
-    navigate('VideoKikoCand')
+    navigate("VideoKikoCand");
   };
 
   const handleSecondNoAnswer = () => {
@@ -53,10 +53,10 @@ export default function ThirdStep() {
       </Text>
       <View style={styles.buttonsGroup}>
         <RectButton style={styles.buttonGreen} onPress={handleYesAnswer}>
-          <Text>Sim</Text>
+          <Text style={styles.buttonText}>Sim</Text>
         </RectButton>
         <RectButton style={styles.buttonRed} onPress={handleNoAsnwer}>
-          <Text>Não</Text>
+          <Text style={styles.buttonText}>Não</Text>
         </RectButton>
       </View>
       {show4thQuestion && (
@@ -67,10 +67,10 @@ export default function ThirdStep() {
               style={styles.buttonGreen}
               onPress={handleSecondYesAnswer}
             >
-              <Text>Sim</Text>
+              <Text style={styles.buttonText}>Sim</Text>
             </RectButton>
             <RectButton style={styles.buttonRed} onPress={handleSecondNoAnswer}>
-              <Text>Não</Text>
+              <Text style={styles.buttonText}>Não</Text>
             </RectButton>
           </View>
         </View>

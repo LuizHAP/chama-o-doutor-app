@@ -3,14 +3,15 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFF",
+    backgroundColor: "#E26B2A",
     justifyContent: "center",
     alignItems: "center",
   },
   questionText: {
     fontSize: 30,
-    textAlign: 'center',
-    fontWeight: 'bold',
+    textAlign: "center",
+    fontWeight: "bold",
+    color: "#FFF",
     paddingVertical: 20,
   },
   questionGroup: {
@@ -23,6 +24,9 @@ const styles = StyleSheet.create({
   buttonGreen: {
     backgroundColor: "#32CD32",
     padding: 20,
+  },
+  buttonText: {
+    color: "#FFF",
   },
   buttonRed: {
     backgroundColor: "#ff0000",

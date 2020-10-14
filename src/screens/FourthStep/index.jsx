@@ -29,13 +29,15 @@ export default function FourthStep() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.questionText}>Sabe quem são os candidatos do prefeito Kiko?</Text>
+      <Text style={styles.questionText}>
+        Sabe quem são os candidatos do prefeito Kiko?
+      </Text>
       <View style={styles.buttonsGroup}>
         <RectButton style={styles.buttonGreen} onPress={handleYesAnswer}>
-          <Text>Sim</Text>
+          <Text style={styles.buttonText}>Sim</Text>
         </RectButton>
         <RectButton style={styles.buttonRed} onPress={handleNoAsnwer}>
-          <Text>Não</Text>
+          <Text style={styles.buttonText}>Não</Text>
         </RectButton>
       </View>
     </View>

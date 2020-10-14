@@ -12,7 +12,7 @@ function VideoKikoCand() {
   return (
     <View style={styles.container}>
       <Video
-        source={require("../../assets/video/uau_video_3.mp4")}
+        source={require("../../assets/video/kiko_nivaldo_lorena.mp4")}
         rate={1.0}
         volume={1.0}
         isMuted={false}

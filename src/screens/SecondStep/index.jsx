@@ -34,10 +34,10 @@ export default function SecondStep() {
       </Text>
       <View style={styles.buttonsGroup}>
         <RectButton style={styles.buttonGreen} onPress={handleYesAnswer}>
-          <Text>Aprova</Text>
+          <Text style={styles.buttonText}>Aprova</Text>
         </RectButton>
         <RectButton style={styles.buttonRed} onPress={handleNoAsnwer}>
-          <Text>Desaprova</Text>
+          <Text style={styles.buttonText}>Desaprova</Text>
         </RectButton>
       </View>
     </View>

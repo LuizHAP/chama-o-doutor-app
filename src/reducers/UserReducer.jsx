@@ -7,8 +7,6 @@ export const UserReducer = (state, action) => {
         ...state,
         id: uuidv4(),
         name: action.payload.name,
-        lastname: action.payload.lastname,
-        email: action.payload.email,
       };
     case "ADD_FIRSTANSWER":
       return {

@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFF",
+    backgroundColor: "#E26B2A",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'bold',
     paddingVertical: 20,
+    color: "#FFF",
   },
   questionGroup: {
     marginVertical: 10,
@@ -19,6 +20,9 @@ const styles = StyleSheet.create({
   buttonsGroup: {
     flexDirection: "row",
     justifyContent: "space-around",
+  },
+  buttonText: {
+    color: "#FFF",
   },
   buttonGreen: {
     backgroundColor: "#32CD32",

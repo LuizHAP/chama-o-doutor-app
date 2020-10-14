@@ -29,7 +29,7 @@ function Final() {
 
   return (
     <View style={styles.container}>
-      <Text>Obrigado por responder as perguntas</Text>
+      <Text style={styles.textFinal}>Muito obrigado por sua participação!</Text>
       <RectButton style={styles.startQuestionnarie} onPress={handlePreload}>
         <Text style={styles.startQuestionnarieText}>Voltar</Text>
       </RectButton>

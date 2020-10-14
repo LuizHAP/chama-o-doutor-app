@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#E26B2A",
     alignItems: "stretch",
     justifyContent: "center",
     padding: 20,
@@ -10,6 +11,8 @@ const styles = StyleSheet.create({
   label: {
     fontWeight: "bold",
     marginBottom: 5,
+    color: "#FFF",
+    fontSize: 18,
   },
   input: {
     marginBottom: 15,
@@ -18,6 +21,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     borderWidth: 2,
     borderColor: "#ddd",
+    backgroundColor: "#FFF",
     fontSize: 15,
     color: "#444",
   },

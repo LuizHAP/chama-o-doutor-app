@@ -9,6 +9,10 @@ import { RectButton } from "react-native-gesture-handler";
 function OutroCand() {
   const { navigate } = useNavigation();
 
+  const handleFinal = async () => {
+    navigate("Final");
+  };
+
   return (
     <View style={styles.container}>
       <Video
@@ -21,7 +25,7 @@ function OutroCand() {
         useNativeControls
         style={styles.video}
       />
-      <RectButton style={styles.startQuestionnarie} onPress={handlePreload}>
+      <RectButton style={styles.startQuestionnarie} onPress={handleFinal}>
         <Text style={styles.startQuestionnarieText}>Finalizar</Text>
       </RectButton>
     </View>

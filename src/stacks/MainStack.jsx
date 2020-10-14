@@ -12,6 +12,7 @@ import VideoKikoCand from "../screens/VideoKikoCand";
 import Final from "../screens/Final";
 import ConheceCand from "../screens/ConheceCand";
 import OutroCand from "../screens/OutroCand";
+import Nivaldo from "../screens/Nivaldo";
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -30,6 +31,7 @@ export default function MainStack() {
       <Screen name="VideoKikoCand" component={VideoKikoCand} />
       <Screen name="ConheceCand" component={ConheceCand} />
       <Screen name="OutroCand" component={OutroCand} />
+      <Screen name="Nivaldo" component={Nivaldo} />
       <Screen name="Final" component={Final} />
     </Navigator>
   );

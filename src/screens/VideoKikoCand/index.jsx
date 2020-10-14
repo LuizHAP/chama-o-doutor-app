@@ -9,6 +9,10 @@ import { RectButton } from "react-native-gesture-handler";
 function VideoKikoCand() {
   const { navigate } = useNavigation();
 
+  const handleFinal = async () => {
+    navigate("Final");
+  };
+
   return (
     <View style={styles.container}>
       <Video
@@ -21,7 +25,7 @@ function VideoKikoCand() {
         useNativeControls
         style={styles.video}
       />
-      <RectButton style={styles.startQuestionnarie} onPress={handlePreload}>
+      <RectButton style={styles.startQuestionnarie} onPress={handleFinal}>
         <Text style={styles.startQuestionnarieText}>Continuar</Text>
       </RectButton>
     </View>

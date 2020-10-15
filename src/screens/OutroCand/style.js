@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   video: {
-    width: width / 2,
-    height: height / 2,
+    width: width,
+    height: height / 3,
   },
   startQuestionnarie: {
     backgroundColor: "#333",

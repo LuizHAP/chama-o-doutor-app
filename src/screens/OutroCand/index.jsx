@@ -16,7 +16,7 @@ function OutroCand() {
   return (
     <View style={styles.container}>
       <Video
-        source={require("../../assets/video/kiko_nivaldo_lorena.mp4")}
+        source={require("../../assets/video/video_despedida_kiko.mp4")}
         rate={1.0}
         volume={1.0}
         isMuted={false}

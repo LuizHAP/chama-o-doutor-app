@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { RectButton } from "react-native-gesture-handler";
 import { UserContext } from "../../contexts/UserContext";
+
+import finalImg from "../../assets/imagem/drnivaldo_branco.png";
 
 import AsyncStorage from "@react-native-community/async-storage";
 
@@ -28,6 +30,7 @@ function Final() {
 
   return (
     <View style={styles.container}>
+      <Image source={finalImg} style={styles.banner} />
       <Text style={styles.textFinal}>Muito obrigado por sua participação!</Text>
       <RectButton style={styles.startQuestionnarie} onPress={handlePreload}>
         <Text style={styles.startQuestionnarieText}>Voltar</Text>

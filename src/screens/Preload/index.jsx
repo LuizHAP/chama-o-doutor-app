@@ -1,7 +1,9 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { RectButton } from "react-native-gesture-handler";
+
+import landingImg from "../../assets/imagem/faem.png";
 
 import styles from "./style";
 
@@ -18,6 +20,7 @@ function Preload() {
 
   return (
     <View style={styles.container}>
+      <Image source={landingImg} style={styles.banner} />
       <RectButton
         style={styles.startQuestionnarie}
         onPress={handleStartQuestionnarie}

@@ -8,6 +8,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 
+  banner: {
+    width: "90%",
+    resizeMode: "contain", //Redimencione a imagem e conteúdo visível
+  },
+
   startQuestionnarie: {
     backgroundColor: "#333",
     borderRadius: 8,

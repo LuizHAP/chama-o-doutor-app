@@ -8,10 +8,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 
+  banner: {
+    width: "100%",
+    resizeMode: "contain", //Redimencione a imagem e conteúdo visível
+  },
+
   textFinal: {
     color: "#FFF",
     fontSize: 20,
-
+    marginTop: 30,
   },
 
   startQuestionnarie: {

@@ -22,7 +22,6 @@ function VideoKikoCand() {
         isMuted={false}
         resizeMode="cover"
         shouldPlay
-        useNativeControls
         style={styles.video}
       />
       <RectButton style={styles.startQuestionnarie} onPress={handleFinal}>

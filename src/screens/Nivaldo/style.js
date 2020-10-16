@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
   video: {
     width: width,
-    height: height / 3,
+    height: height / 1.5,
   },
   startQuestionnarie: {
     backgroundColor: "#333",

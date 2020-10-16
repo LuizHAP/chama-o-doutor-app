@@ -23,6 +23,7 @@ function VideoKikoCand() {
         resizeMode="cover"
         shouldPlay
         style={styles.video}
+        useNativeControls
       />
       <RectButton style={styles.startQuestionnarie} onPress={handleFinal}>
         <Text style={styles.startQuestionnarieText}>Continuar</Text>

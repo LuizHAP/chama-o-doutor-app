@@ -6,12 +6,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#E26B2A",
-    paddingTop: 100,
+    paddingTop: 20,
     alignItems: "center",
   },
   video: {
     width: width,
-    height: height / 1.5,
+    height: height / 1.2,
   },
   startQuestionnarie: {
     backgroundColor: "#333",

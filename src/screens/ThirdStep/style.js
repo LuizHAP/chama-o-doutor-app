@@ -23,14 +23,18 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "#FFF",
+    fontSize: 15,
+    fontWeight: "bold",
   },
   buttonGreen: {
     backgroundColor: "#32CD32",
     padding: 20,
+    borderColor: "#000",
   },
   buttonRed: {
     backgroundColor: "#ff0000",
     padding: 20,
+    borderColor: "#000",
   },
 });
 

@@ -9,8 +9,8 @@ const styles = StyleSheet.create({
   },
 
   banner: {
-    width: "90%",
-    resizeMode: "contain", //Redimencione a imagem e conteúdo visível
+    width: "70%",
+    marginBottom: 30,
   },
 
   startQuestionnarie: {

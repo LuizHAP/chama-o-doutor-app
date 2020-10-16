@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: "center",
     fontWeight: "bold",
-    color: "#FFF",
     paddingVertical: 20,
+    color: "#FFF",
   },
   questionGroup: {
     marginVertical: 10,
@@ -21,16 +21,20 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
   },
+  buttonText: {
+    color: "#FFF",
+    fontSize: 15,
+    fontWeight: "bold",
+  },
   buttonGreen: {
     backgroundColor: "#32CD32",
     padding: 20,
-  },
-  buttonText: {
-    color: "#FFF",
+    borderColor: "#000",
   },
   buttonRed: {
     backgroundColor: "#ff0000",
     padding: 20,
+    borderColor: "#000",
   },
 });
 

@@ -16,7 +16,7 @@ export default function SecondStep() {
       type: "ADD_SECONDANSWER",
       payload: "Aprova",
     });
-    navigate("ThirdStep");
+    navigate("03-CandPrefKiko");
   };
 
   const handleNoAsnwer = () => {
@@ -24,7 +24,7 @@ export default function SecondStep() {
       type: "ADD_SECONDANSWER",
       payload: "Desaprova",
     });
-    navigate("ThirdStep");
+    navigate("03-CandPrefKiko");
   };
 
   return (

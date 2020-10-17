@@ -11,7 +11,7 @@ function Preload() {
   const { navigate } = useNavigation();
 
   const handleStartQuestionnarie = () => {
-    navigate("FirstStep");
+    navigate("01-CandPrefeito");
   };
 
   const handleUploadData = () => {

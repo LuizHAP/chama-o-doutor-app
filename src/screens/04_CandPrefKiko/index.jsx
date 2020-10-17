@@ -7,29 +7,30 @@ import { UserContext } from "../../contexts/UserContext";
 
 import styles from "./style";
 
-export default function FirstStep() {
+export default function ThirdStep() {
   const { navigate } = useNavigation();
   const { dispatch } = useContext(UserContext);
 
   const handleYesAnswer = () => {
     dispatch({
-      type: "ADD_FIRSTANSWER",
+      type: "ADD_THIRDANSWER",
       payload: "Sim",
     });
-    navigate("SecondStep");
+    navigate("ConheceCand");
   };
 
   const handleNoAsnwer = () => {
     dispatch({
-      type: "ADD_FIRSTANSWER",
+      type: "ADD_THIRDANSWER",
       payload: "Não",
     });
-    navigate("SecondStep");
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.questionText}>Já tem candidato a prefeito?</Text>
+      <Text style={styles.questionText}>
+        Sabe quem são os candidatos do prefeito Kiko?
+      </Text>
       <View style={styles.buttonsGroup}>
         <RectButton style={styles.buttonGreen} onPress={handleYesAnswer}>
           <Text style={styles.buttonText}>Sim</Text>

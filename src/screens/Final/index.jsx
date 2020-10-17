@@ -25,7 +25,7 @@ function Final() {
 
   const handlePreload = async () => {
     asyncStorageSet();
-    navigate("Inicial");
+    navigate("00-Inicial");
   };
 
   return (

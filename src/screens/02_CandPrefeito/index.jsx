@@ -7,7 +7,7 @@ import { UserContext } from "../../contexts/UserContext";
 
 import styles from "./style";
 
-export default function FirstStep() {
+export default function CandPrefeito() {
   const { navigate } = useNavigation();
   const { dispatch } = useContext(UserContext);
 

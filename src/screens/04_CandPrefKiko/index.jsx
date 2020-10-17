@@ -24,6 +24,7 @@ export default function ThirdStep() {
       type: "ADD_THIRDANSWER",
       payload: "Não",
     });
+    navigate("04-QuerConhecerCandPrefKiko");
   };
 
   return (

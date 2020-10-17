@@ -12,7 +12,7 @@ import { UserContext } from "../../contexts/UserContext";
 
 import styles from "./style";
 
-function Questionnarie() {
+function Questionario() {
   const { navigate } = useNavigation();
   const [nomeColaborador, setNomeColaborador] = useState("");
 
@@ -23,7 +23,7 @@ function Questionnarie() {
       type: "ADD_USER",
       payload: { nomeColaborador: nomeColaborador },
     });
-    navigate("Inicial");
+    navigate("00-Inicial");
   };
 
   return (
@@ -51,4 +51,4 @@ function Questionnarie() {
   );
 }
 
-export default Questionnarie;
+export default Questionario;

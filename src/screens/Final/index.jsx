@@ -10,12 +10,15 @@ import AsyncStorage from "@react-native-community/async-storage";
 
 import styles from "./style";
 
+import axios from 'axios'
+
 function Final() {
   const { navigate } = useNavigation();
   const { state } = useContext(UserContext);
 
   const asyncStorageSet = async () => {
     try {
+      //TODO: Check Internet connections
       const stringfyID = JSON.stringify(state.id);
       await AsyncStorage.setItem(`ChamaODoutor - ${stringfyID}`, JSON.stringify(state));
     } catch (e) {

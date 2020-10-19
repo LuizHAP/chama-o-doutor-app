@@ -7,6 +7,8 @@ import axios from "axios";
 
 import AsyncStorage from "@react-native-community/async-storage";
 
+import Api from "../../Api";
+
 import styles from "./style";
 
 const UploadData = (props) => {
@@ -16,23 +18,15 @@ const UploadData = (props) => {
     const keys = await AsyncStorage.getAllKeys();
     const result = await AsyncStorage.multiGet(keys);
     await AsyncStorage.clear();
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbxcCaNLfucf8u_NyJc9Kzzw1rsGUGx-Nov2xMPU1n8wSRy4fvGK/exec";
-    let object = {};
     result.map((item) => {
       object[`${item[0]}`] = item[1];
     });
-    console.log(object);
-    await axios
-      .get(scriptURL, {
-        params: { id: object.id, nomeColaborador: object.nomeColaborador },
-      })
-      .then(async (r) => {
-        navigate("Inicial");
-      })
-      .catch((e) => {
-        alert(`${e}`);
-      });
+    let res = await Api.postAnswers(object);
+    if (res.error == "") {
+      console.log("deu certo");
+    } else {
+      console.warn(res.error);
+    }
   };
 
   return (

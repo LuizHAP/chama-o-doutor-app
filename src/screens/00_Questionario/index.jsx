@@ -27,27 +27,19 @@ function Questionario() {
   };
 
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : null}
-      style={styles.container}
-    >
-      <View style={styles.questionnarieForm}>
-        <Text style={styles.label}>Nome do Colaborador</Text>
-        <TextInput
-          style={styles.input}
-          value={nomeColaborador}
-          onChangeText={(text) => setNomeColaborador(text)}
-          autoCorrect={false}
-          autoCapitalize="none"
-        />
-        <TouchableOpacity
-          style={styles.submitButton}
-          onPress={handleSubmitForm}
-        >
-          <Text style={styles.submitButtonText}>Enviar</Text>
-        </TouchableOpacity>
-      </View>
-    </KeyboardAvoidingView>
+    <View style={styles.container}>
+      <Text style={styles.label}>Nome do Colaborador</Text>
+      <TextInput
+        style={styles.input}
+        value={nomeColaborador}
+        onChangeText={(text) => setNomeColaborador(text)}
+        autoCorrect={false}
+        autoCapitalize="none"
+      />
+      <TouchableOpacity style={styles.submitButton} onPress={handleSubmitForm}>
+        <Text style={styles.submitButtonText}>Enviar</Text>
+      </TouchableOpacity>
+    </View>
   );
 }
 

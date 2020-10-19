@@ -27,9 +27,9 @@ function Preload() {
       >
         <Text style={styles.startQuestionnarieText}>Iniciar</Text>
       </RectButton>
-      {/* <RectButton style={styles.startQuestionnarie} onPress={handleUploadData}>
+      <RectButton style={styles.startQuestionnarie} onPress={handleUploadData}>
         <Text style={styles.startQuestionnarieText}>UploadData</Text>
-      </RectButton> */}
+      </RectButton>
     </View>
   );
 }

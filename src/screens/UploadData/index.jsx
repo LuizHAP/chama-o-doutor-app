@@ -36,14 +36,12 @@ const UploadData = (props) => {
             await AsyncStorage.clear();
             alert("Dados enviados com sucesso");
             navigate("Questionario");
-          } else {
-            alert("Você precisa responder pelo menos uma vez o questionário");
-            navigate("00-Inicial");
           }
         });
       } else {
         alert("Você precisa responder pelo menos uma vez o questionário");
         navigate("00-Inicial");
+        return
       }
     } else {
       alert("Você está sem conexão com a internet");

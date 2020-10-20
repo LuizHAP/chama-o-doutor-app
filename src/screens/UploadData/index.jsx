@@ -19,7 +19,7 @@ const UploadData = (props) => {
   const handleUploadData = async () => {
     const { isInternetReachable } = await Network.getNetworkStateAsync();
     if (isInternetReachable) {
-      const keys = await AsyncStorage.getAllKeys(); q
+      const keys = await AsyncStorage.getAllKeys();
       if (keys.length != 0) {
         const result = await AsyncStorage.multiGet(keys);
         await AsyncStorage.clear();
@@ -34,9 +34,11 @@ const UploadData = (props) => {
         }
       } else {
         alert("Você precisa responder pelo menos uma vez o questionário");
+        navigate("00-Inicial");
       }
     } else {
       alert("Você está sem conexão com a internet");
+      navigate("00-Inicial");
     }
   };
 

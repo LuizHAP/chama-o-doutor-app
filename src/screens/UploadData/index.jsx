@@ -22,16 +22,23 @@ const UploadData = (props) => {
       const keys = await AsyncStorage.getAllKeys();
       if (keys.length != 0) {
         const result = await AsyncStorage.multiGet(keys);
-        const obj = Object.fromEntries(result);
-        Object.keys(obj).forEach(async function (e) {
-          let res = await Api.postAnswers(...e);
-          if (res.error == "") {
+        result.map(async (item) => {
+          if (item[0].includes("@ChamaODoutor")) {
+            const obj = JSON.parse(item[1]);
+            const res = await Api.postAnswers(
+              obj.id_quiz,
+              obj.nomeColaborador,
+              obj.candPrefeito,
+              obj.governoKiko,
+              obj.candPrefKiko,
+              obj.querConhecer
+            );
+            await AsyncStorage.clear();
             alert("Dados enviados com sucesso");
             navigate("Questionario");
-            await AsyncStorage.clear();
           } else {
-            console.warn(res.error);
-            alert("Apresentou erros, tente novamente");
+            alert("Você precisa responder pelo menos uma vez o questionário");
+            navigate("00-Inicial");
           }
         });
       } else {

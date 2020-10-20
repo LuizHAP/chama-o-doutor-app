@@ -19,11 +19,15 @@ function Questionario() {
   const { dispatch } = useContext(UserContext);
 
   const handleSubmitForm = () => {
-    dispatch({
-      type: "ADD_USER",
-      payload: { nomeColaborador: nomeColaborador },
-    });
-    navigate("00-Inicial");
+    if (nomeColaborador) {
+      dispatch({
+        type: "ADD_USER",
+        payload: { nomeColaborador: nomeColaborador },
+      });
+      navigate("00-Inicial");
+    } else {
+      alert("Você deve preencher o nome do Colaborador");
+    }
   };
 
   return (

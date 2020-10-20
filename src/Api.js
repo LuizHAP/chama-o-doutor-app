@@ -1,4 +1,4 @@
-const BASE_API = "https://chama-o-doutor-server.herokuapp.com/api/";
+const BASE_API = "https://chama-o-doutor-server.herokuapp.com/api";
 
 export default {
   postAnswers: async (

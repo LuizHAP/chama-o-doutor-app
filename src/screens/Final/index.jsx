@@ -19,7 +19,7 @@ function Final() {
   const asyncStorageSet = async () => {
     try {
       //TODO: Check Internet connections
-      const stringfyID = JSON.stringify(state.id);
+      const stringfyID = JSON.stringify(state.id_quiz);
       await AsyncStorage.setItem(`ChamaODoutor - ${stringfyID}`, JSON.stringify(state));
     } catch (e) {
       console.log(e);

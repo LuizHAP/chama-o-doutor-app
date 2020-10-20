@@ -22,15 +22,26 @@ const UploadData = (props) => {
       const keys = await AsyncStorage.getAllKeys();
       if (keys.length != 0) {
         const result = await AsyncStorage.multiGet(keys);
-        await AsyncStorage.clear();
+        const object = [];
         result.map((item) => {
           object[`${item[0]}`] = item[1];
         });
-        let res = await Api.postAnswers(object);
+        console.log(object);
+        let res = await Api.postAnswers(
+          object.id_quiz,
+          object.nomeColaborador,
+          object.candPrefeito,
+          object.governoKiko,
+          object.candPrefKiko,
+          object.querConhecer
+        );
         if (res.error == "") {
-          console.log("deu certo");
+          alert("Dados enviados com sucesso");
+          navigate("Questionario");
+          await AsyncStorage.clear();
         } else {
           console.warn(res.error);
+          alert("Apresentou erros, tente novamente");
         }
       } else {
         alert("Você precisa responder pelo menos uma vez o questionário");

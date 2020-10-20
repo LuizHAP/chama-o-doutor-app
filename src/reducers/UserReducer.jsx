@@ -5,7 +5,7 @@ export const UserReducer = (state, action) => {
     case "ADD_USER":
       return {
         ...state,
-        id: uuidv4(),
+        id_quiz: uuidv4(),
         nomeColaborador: action.payload.nomeColaborador,
       };
     case "ADD_FIRSTANSWER":

@@ -3,6 +3,8 @@ import { View, Text, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { RectButton } from "react-native-gesture-handler";
 
+import * as Network from "expo-network";
+
 import landingImg from "../../assets/imagem/faem.png";
 
 import styles from "./style";
@@ -14,8 +16,13 @@ function Preload() {
     navigate("01-CandPrefeito");
   };
 
-  const handleUploadData = () => {
-    navigate("UploadData");
+  const handleUploadData = async () => {
+    const { isInternetReachable } = await Network.getNetworkStateAsync();
+    if (isInternetReachable) {
+      navigate("UploadData")
+    } else {
+      alert("Você está sem conexão com a internet")
+    }
   };
 
   return (

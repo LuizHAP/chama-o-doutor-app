@@ -31,7 +31,8 @@ const UploadData = (props) => {
               obj.candPrefeito,
               obj.governoKiko,
               obj.candPrefKiko,
-              obj.querConhecer
+              obj.querConhecer,
+              obj.candidatosKiko
             );
             await AsyncStorage.clear();
             alert("Dados enviados com sucesso");

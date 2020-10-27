@@ -16,7 +16,6 @@ export const UserReducer = (state, action) => {
     case "ADD_SECONDANSWER":
       return {
         ...state,
-
         governoKiko: action.payload,
       };
     case "ADD_THIRDANSWER":
@@ -28,6 +27,11 @@ export const UserReducer = (state, action) => {
       return {
         ...state,
         querConhecer: action.payload,
+      };
+    case "ADD_CONHECECAND":
+      return {
+        ...state,
+        candidatosKiko: action.payload,
       };
     default:
       return state;

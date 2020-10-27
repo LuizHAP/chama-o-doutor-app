@@ -35,7 +35,7 @@ function Preload() {
         <Text style={styles.startQuestionnarieText}>Iniciar</Text>
       </RectButton>
       <RectButton style={styles.startQuestionnarie} onPress={handleUploadData}>
-        <Text style={styles.startQuestionnarieText}>UploadData</Text>
+        <Text style={styles.startQuestionnarieText}>Enviar informações</Text>
       </RectButton>
     </View>
   );
